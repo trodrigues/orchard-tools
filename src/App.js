@@ -1,10 +1,10 @@
-import { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import './App.css'
-import injectAndInitMusickit from './init-musickit'
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import injectAndInitMusickit from "./init-musickit";
 
 export default function App() {
-  useEffect(injectAndInitMusickit)
+  useEffect(injectAndInitMusickit);
 
   return (
     <Router>
@@ -32,17 +32,17 @@ export default function App() {
         </Routes>
       </div>
     </Router>
-  )
+  );
 }
 
 function Home() {
-  return <h2>Home</h2>
+  return <h2>Home</h2>;
 }
 
 function About() {
-  return <h2>About</h2>
+  return <h2>About</h2>;
 }
 
 function Users() {
-  return <h2>Users</h2>
+  return <h2>Users</h2>;
 }
