@@ -45,7 +45,12 @@ function Home() {
     let album = music.api.album(1025210938);
     album.then((data) => console.log(data));
   }, 250);
-  return <h2>Home</h2>;
+  return (
+    <div>
+      <h2>Home</h2>
+      <button id="apple-music-authorize">Login</button>
+    </div>
+  );
 }
 
 function About() {

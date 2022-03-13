@@ -3,6 +3,7 @@ export default function injectAndInitMusickit(musicKitToken) {
   return () => {
     document.addEventListener("musickitloaded", function () {
       MusicKit.configure({
+        declarativeMarkup: true,
         developerToken: musicKitToken,
         app: {
           name: "My Cool Web App",
