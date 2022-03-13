@@ -6,6 +6,7 @@ services:
     volumes:
       - ./src:/usr/src/app/src
       - ./public:/usr/src/app/public
+      - ./.env.local:/usr/src/app/.env.local
   proxy:
     image: nginx:1.19.10-alpine
     ports:
