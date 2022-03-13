@@ -3,8 +3,12 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import injectAndInitMusickit from "./init-musickit";
 
+const kitInjector = injectAndInitMusickit(
+  process.env.REACT_APP_MUSICKIT_DEV_TOKEN
+);
+
 export default function App() {
-  useEffect(injectAndInitMusickit);
+  useEffect(kitInjector);
 
   return (
     <Router>
@@ -36,6 +40,11 @@ export default function App() {
 }
 
 function Home() {
+  setTimeout(() => {
+    let music = window.MusicKit.getInstance();
+    let album = music.api.album(1025210938);
+    album.then((data) => console.log(data));
+  }, 250);
   return <h2>Home</h2>;
 }
 
