@@ -1,6 +1,6 @@
 /* global MusicKit */
+let sdk;
 export default function initMusickit(fn) {
-  let sdk;
   if (sdk) {
     fn(sdk.getInstance());
   } else {
